@@ -23,9 +23,12 @@
 
 ### v0.6 (7/18/23)
  - File read/write revamp.
- - Configuration saving
+ - Configuration saving via .bpc file.
+
+### v0.7 (7/19/23)
+ - Ported code to Java.
+ - Revamped input listening to include more error handling and generally be more stable.
+ - Redid some infill logic for the sake of compatibility with Java libraries.
 
 ### Planning to add:
- - Toggle advanced mode which gives more options
- - Load from .bpc (bioprintconfig) file on start so user settings are saved
- - Save/load .bpp (bioprintparameter) file for use in printing under preset settings
+ - GUI
