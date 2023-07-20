@@ -2,7 +2,12 @@
 
 A terminal-based tool I developed to parametrically generate GCode files for the Cellink BioX 3D printer. 
 Existing slicers did not have sufficient precision or customization of different print properties for research
-purposes so I simply made my own.
+purposes so I simply made my own. 
+
+This version is "complete" and will not be further updated. I am revamping the entire program to be GUI-based for ease of use but
+that takes time and for now I'm shifting focus away from primarily programming so until then, this is the best solution. 
+
+If there are issues, contact me: replogle.17@buckeyemail.osu.edu
 
 [Download]()
 
