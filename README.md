@@ -13,7 +13,7 @@ If there are issues, contact me: replogle.17@buckeyemail.osu.edu
 
 [Changelog](https://github.com/cjreplogle/BGT/blob/main/changelog.md)
 
-[Documentation](https://github.com/cjreplogle/BGT/blob/main/help.md)
+[Documentation](https://github.com/cjreplogle/BGT/blob/main/help.md) *If you are confused on any functionality of this program, read this.*
 
 [BGT-C](https://github.com/cjreplogle/BGT-C/tree/main) *(Old version of this program if you ever need it)*
 
