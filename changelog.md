@@ -31,4 +31,5 @@
  - Redid some infill logic for the sake of compatibility with Java libraries.
 
 ### Planning to add:
- - GUI
+ - GUI (JavaFX)
+ - Launch4j or similar direct launch.
