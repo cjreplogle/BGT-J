@@ -4,8 +4,8 @@ A terminal-based tool I developed to parametrically generate GCode files for the
 Existing slicers did not have sufficient precision or customization of different print properties for research
 purposes so I simply made my own. 
 
-This version is "complete" and will not be further updated. I am revamping the entire program to be GUI-based for ease of use but
-that takes time and for now I'm shifting focus away from primarily programming so until then, this is the best solution. 
+This version is highly experimental and requires some understanding of how it is programmed and the ability to use a terminal user interface to operate effectively. I am revamping the entire program to be GUI-based for ease of use but
+that takes time and for now I'm shifting my focus towards protocol optimization as this program is capable of doing everything necessary for my purposes.
 
 
 [Download](https://github.com/cjreplogle/BGT-C/tags) - *For now, download BGT-C. Java version isn't compiling how I want it to.*
