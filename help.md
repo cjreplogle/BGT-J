@@ -38,6 +38,8 @@ With that word salad out of the way, if there are any issues encountered with th
 * The distance between the central point of the printhead between horizontal segments in the layer patterning for rectilinear infills. (Note: larger printheads will need larger pore sizes to compensate!)
 Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.5mm pore size
 
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Strut to Strut.png" alt="Strut-to-Strut Visual" width="200"/>
+
 ### Path Linkage
 * For cylindrical rectilinear patterns, generates a segment at each end of the 2D curve to close the circular structure. [KNOWN ISSUE: For scaffolds generated with an odd number of pores, the program infills the final linkage in the wrong direction leading to the printer moving the extruder back into the ink. I haven't programmed a fix to this yet. (Use modulae to determine if number of pores across is odd or even, then generate path linkers accordingly {opposite y value})]
 
@@ -55,6 +57,8 @@ Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.
 ### Printhead Count
 * This implements multiple printheads in the construction of the scaffold. The scaffold is automatically divided in halves/thirds depending on the number of printheads indicated. Printheads are used left to right unless 1 is used, in which case whatever printhead is considered default is used.
 
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/RenderedBilayerScaffold.png" alt="Bilayer Scaffold" width="75"/>
+
 ### Section Count
 * This divides the scaffold into multiple sections with different patterning between sections. Other transformation parameters below may be modified betwen layers (may implement different infill types in this as well if it is determined to be useful).
 
@@ -63,6 +67,8 @@ Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.
 90/270 degree linkage forms a square pattern, 60/120/240/300 degree linkage forms a triangular pattern, 72 creates a pentagonal pattern but this is harder to see unless a small nozzle diameter is used. 
 Linkage angle may be combined with other layer transformations to allow for the printer to move along a consistent path for the entire print, but this being possible depends on the modular arithmatic of the angular transformation.
 (A simple single-path print configuration is rectilinear/90 degrees/flip x). Multi-section scaffolds may implement differnet linkage angles by region.
+
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Angle Linkage.png" alt="Angle Linkage Diagram" width="133"/>
 
 ### Flip X/Y
 * Flips the existing layer along the x-coordinate or y-coordinate each layer. Primarily useful for rectilinear-based prints. May implement a single path transformation for a 60 degree linkage that would need to alternate between x/y flips. 
