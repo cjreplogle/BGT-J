@@ -57,8 +57,6 @@ Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.
 ### Printhead Count
 * This implements multiple printheads in the construction of the scaffold. The scaffold is automatically divided in halves/thirds depending on the number of printheads indicated. Printheads are used left to right unless 1 is used, in which case whatever printhead is considered default is used.
 
-<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/RenderedBilayerScaffold.png" alt="Bilayer Scaffold" width="75"/>
-
 ### Section Count
 * This divides the scaffold into multiple sections with different patterning between sections. Other transformation parameters below may be modified betwen layers (may implement different infill types in this as well if it is determined to be useful).
 
