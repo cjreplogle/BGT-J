@@ -31,10 +31,10 @@ With that word salad out of the way, if there are any issues encountered with th
 
 * **Concentric Cylinder** -> Generates a concentric lattice 2D infill pattern. 
 
-### Radius
-* A radius for a circlar infill should be passed to the program in millimeters. 
+### Path Radius
+* A radius for a circlar infill should be passed to the program in millimeters. I have not programmed this to consider the actual nozzle width with this so you will need to make it half the nozzle width smaller. (Plan to fix this)
 
-### Pore Size
+### Strut-to-Strut Distance
 * The distance between the central point of the printhead between horizontal segments in the layer patterning for rectilinear infills. (Note: larger printheads will need larger pore sizes to compensate!)
 Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.5mm pore size
 
