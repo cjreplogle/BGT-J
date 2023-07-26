@@ -29,7 +29,9 @@ With that word salad out of the way, if there are any issues encountered with th
 
 * **Rectilinear Square** -> Generates a 2D square layer with a rectilinear infill pattern.
 
-* **Concentric Cylinder** -> Generates a concentric lattice 2D infill pattern. 
+* **Concentric Cylinder** -> Generates a concentric lattice 2D infill pattern.
+
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Types.png" alt="Types of Infills" width="200"/>
 
 ### Path Radius
 * A radius for a circlar infill should be passed to the program in millimeters. I have not programmed this to consider the actual nozzle width with this so you will need to make it half the nozzle width smaller. (Plan to fix this)
@@ -59,6 +61,8 @@ Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.
 
 ### Section Count
 * This divides the scaffold into multiple sections with different patterning between sections. Other transformation parameters below may be modified betwen layers (may implement different infill types in this as well if it is determined to be useful).
+  
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Bilayer.png" alt="Multi-Section Prints" width="150"/>
 
 ### Linkage Angle
 * Determines the angle in degrees which the initial infill layer is transformed upon moving up a layer in the print. This produces unique results depending on the quotient of the passed angle and 180.
@@ -66,7 +70,7 @@ Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.
 Linkage angle may be combined with other layer transformations to allow for the printer to move along a consistent path for the entire print, but this being possible depends on the modular arithmatic of the angular transformation.
 (A simple single-path print configuration is rectilinear/90 degrees/flip x). Multi-section scaffolds may implement differnet linkage angles by region.
 
-<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Angle Linkage.png" alt="Angle Linkage Diagram" width="133"/>
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Angle Linkage.png" alt="Angle Linkage Diagram" width="167"/>
 
 ### Flip X/Y
 * Flips the existing layer along the x-coordinate or y-coordinate each layer. Primarily useful for rectilinear-based prints. May implement a single path transformation for a 60 degree linkage that would need to alternate between x/y flips. 
@@ -77,14 +81,14 @@ Linkage angle may be combined with other layer transformations to allow for the 
 ### Switchback Layering
 * This prints patterns in pairs of layers. The printer will take the same path it took to generate a layer backwards to the starting point (Doing this additional times has not been needed for our purposes but if it eventually is I can implement it fairly easily.) [^](#bgt-documentation)
 
-<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Switchback.png" alt="Photo of Printed Scaffold" width="125"/>
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Switchback.png" alt="Normal vs. Switchback Layering" width="135"/>
 
 ## Printer Configuration
 
 ### Layer Height
 * This is the z-coordinate separation between layers. I recommend a few hundreths of a mm smaller than the actual nozzle diameter for ideal results. (0.6mm->0.54mm,0.4mm->0.36)
 
-<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Layer Height.png" alt="Photo of Printed Scaffold" width="200"/>
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Layer Height.png" alt="Layer Height Modulation" width="200"/>
 
 ### ZMax
 * This is the stopping z-coordinate for the vertical transformation algorithm. Whatever you set this to is equivalent to the scaffold's approximate height (will add an amount less than the nozzle diameter due to each layer having a certain thickness).
