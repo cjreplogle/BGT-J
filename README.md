@@ -12,9 +12,9 @@ that takes time and for now I'm shifting my focus towards protocol optimization 
 
 [Download](https://github.com/cjreplogle/BGT-C/tags) - *For now, download BGT-C. Java version isn't compiling how I want it to.*
 
-[Documentation](https://github.com/cjreplogle/BGT/blob/main/help.md) - *If you are confused on any functionality of this program, read this first.*
+[Documentation](https://github.com/cjreplogle/BGT-J/blob/main/help.md) - *If you are confused on any functionality of this program, read this first.*
 
-[Changelog](https://github.com/cjreplogle/BGT/blob/main/changelog.md) - *Update history of this program since its creation, as version control was implemented later in development.*
+[Changelog](https://github.com/cjreplogle/BGT-J/blob/main/changelog.md) - *Update history of this program since its creation, as version control was implemented later in development.*
 
 [BGT-C](https://github.com/cjreplogle/BGT-C/tree/main) - *Old version of this program if you ever need it.*
 
