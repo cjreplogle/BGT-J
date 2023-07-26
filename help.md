@@ -79,10 +79,14 @@ Linkage angle may be combined with other layer transformations to allow for the 
 ### Switchback Layering
 * This prints patterns in pairs of layers. The printer will take the same path it took to generate a layer backwards to the starting point (Doing this additional times has not been needed for our purposes but if it eventually is I can implement it fairly easily.) [^](#bgt-documentation)
 
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Switchback.png" alt="Photo of Printed Scaffold" width="125"/>
+
 ## Printer Configuration
 
 ### Layer Height
-* This is the z-coordinate separation between layers. I recommend a few hundreths of a mm smaller than the actual nozzle diameter for ideal results. (0.6mm->0.55mm,0.4mm->0.37)
+* This is the z-coordinate separation between layers. I recommend a few hundreths of a mm smaller than the actual nozzle diameter for ideal results. (0.6mm->0.54mm,0.4mm->0.36)
+
+<img src="https://github.com/cjreplogle/BGT-J/blob/main/assets/Layer Height.png" alt="Photo of Printed Scaffold" width="200"/>
 
 ### ZMax
 * This is the stopping z-coordinate for the vertical transformation algorithm. Whatever you set this to is equivalent to the scaffold's approximate height (will add an amount less than the nozzle diameter due to each layer having a certain thickness).
