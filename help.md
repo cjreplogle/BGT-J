@@ -39,7 +39,7 @@ With that word salad out of the way, if there are any issues encountered with th
 Recommended Settings: 0.6mm nozzle -> 1.5-2mm pore size, 0.4mm nozzle -> 1.0->1.5mm pore size
 
 ### Path Linkage
-* For cylindrical rectilinear patterns, generates a segment at each end of the 2D curve to close the circular structure.
+* For cylindrical rectilinear patterns, generates a segment at each end of the 2D curve to close the circular structure. [KNOWN ISSUE: For scaffolds generated with an odd number of pores, the program infills the final linkage in the wrong direction leading to the printer moving the extruder back into the ink. I haven't programmed a fix to this yet. (Use modulae to determine if number of pores across is odd or even, then generate path linkers accordingly {opposite y value})]
 
 ### Pore Depth
 * This is particular to the outer layer of the concentric cylinder infill. It just determines how far inwards the outer pattern's inner grid will go.
