@@ -296,7 +296,7 @@ public class BioprintingGCodeTool {
             poreindex--;
 
             if (pl == 1) { // closes beginning of curve to side
-                for (int i = (int) (poreindex / 1.5); i >= 0; i--) {
+                for (int i = (int) (poreindex / 1.4); i >= 0; i--) {
                     writer.write(String.format("X %f Y %f ;%n", pset[i][0], -1 * pset[i][1]));
                     System.out.println(pset[i][0] + " " + pset[i][1] + "\n");
                 }
@@ -324,8 +324,14 @@ public class BioprintingGCodeTool {
             }
 
             if (pl == 1) { // prints end of curve to connect
-                for (int i = 0; i < poreindex / 2.1; i++) {
-                    writer.write(String.format("X %f Y %f ;%n", -1 * pset[i][0], pset[i][1]));
+                if((Math.round(2*radius/ps)%2)==1) {
+                    for (int i = 0; i < poreindex / 2; i++) {
+                        writer.write(String.format("X %f Y %f ;%n", -1 * pset[i][0], -1 * pset[i][1]));
+                    }
+                } else {
+                    for (int i = 0; i < poreindex / 2; i++) {
+                        writer.write(String.format("X %f Y %f ;%n", -1 * pset[i][0], pset[i][1]));
+                    }
                 }
             }
 
@@ -493,18 +499,18 @@ public class BioprintingGCodeTool {
                         }
                     }
                 } else { // recursive transformation case
-                    if (fx[(int) sectiontrack] == 1) { // check x layer swap
+                    if ((fx[(int) sectiontrack] == 1) && (layercout % 4 == 0)) { // check x layer swap
                         for (int i = 0; i < cout; i++) {
-                            tcoord[i][0] = (float) Math.pow(-1, layercout) * coord[i][0];
+                            tcoord[i][0] = -1 * coord[i][0];
                         }
                     } else {
                         for (int i = 0; i < cout; i++) {
                             tcoord[i][0] = coord[i][0];
                         }
                     }
-                    if (fy[(int) sectiontrack] == 1) { // check y layer swap
+                    if ((fy[(int) sectiontrack] == 1) && (layercout % 4 == 1)) { // check y layer swap
                         for (int i = 0; i < cout; i++) {
-                            tcoord[i][1] = (float) Math.pow(-1, layercout) * coord[i][1];
+                            tcoord[i][1] = -1 * coord[i][1];
                         }
                     } else {
                         for (int i = 0; i < cout; i++) {
