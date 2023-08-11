@@ -30,6 +30,10 @@
  - Revamped input listening to include more error handling and generally be more stable.
  - Redid some infill logic for the sake of compatibility with Java libraries.
 
+### v0.8 (8/11/23)
+ - Some changes to math to make generated structure better (Have not fully generalized flip functions to all angles as it is beyond my use case, may do this later)
+ - Packaged properly(ish)
+
 ### Planning to add:
  - GUI (JavaFX)
  - Launch4j or similar direct launch.
