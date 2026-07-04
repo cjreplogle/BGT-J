@@ -1,6 +1,8 @@
 # Bioprinting GCode Tool (Java Edition) 
 ![BGT Icon](https://github.com/cjreplogle/BGT-J/blob/main/assets/BGT.png)
 
+## NOTE: THIS PROJECT IS OUTDATED AND HAS A SUBPAR CODEBASE (in my opinion). I MAY GET BACK TO THIS AT SOME POINT BUT IF YOU ARE A RESEARCHER/STUDENT LOOKING AT THIS YOU ARE LIKELY BETTER SERVED BY EXPORTING .GCODE FILES AS INSTRUCTUION SETS TO YOUR PRINTER VIA ULTIMAKER. 
+
 A terminal-based tool I developed to parametrically generate GCode files for the Cellink BioX 3D printer. 
 Existing slicers did not have sufficient precision or customization of different print properties for research
 purposes so I simply made my own. 
